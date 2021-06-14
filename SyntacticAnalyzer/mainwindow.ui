@@ -6,16 +6,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>750</width>
-    <height>762</height>
+    <width>757</width>
+    <height>412</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>SintacticAnalyzer</string>
+   <string>LexicalAnalyzer</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout_3">
+   <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
      <widget class="QLabel" name="Title">
       <property name="font">
        <font>
@@ -25,76 +32,91 @@
        </font>
       </property>
       <property name="text">
-       <string>Analizador Sintáctico</string>
+       <string>Analizador Léxico</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </item>
-    <item row="1" column="0">
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="0">
-       <widget class="QTextEdit" name="textTE"/>
-      </item>
+    <item row="1" column="1">
+     <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="1">
-       <layout class="QGridLayout" name="gridLayout">
-        <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
          <widget class="QPushButton" name="analyzeBT">
           <property name="text">
            <string>Analizar</string>
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="isValidLE">
+        <item>
+         <widget class="QLabel" name="checkLB">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>89</width>
+            <height>87</height>
+           </size>
+          </property>
           <property name="text">
-           <string>X</string>
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="resource.qrc">:/images/check.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="crossLB">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>89</width>
+            <height>87</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="resource.qrc">:/images/cross.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
        </layout>
       </item>
+      <item row="0" column="0">
+       <widget class="QTextEdit" name="textTE"/>
+      </item>
      </layout>
     </item>
-    <item row="2" column="0">
-     <widget class="QTableWidget" name="tokensTableTG">
-      <column>
-       <property name="text">
-        <string>Token</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Número</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Lexema</string>
-       </property>
-      </column>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
    </layout>
+   <zorder>textTE</zorder>
    <zorder>label</zorder>
    <zorder>Title</zorder>
-   <zorder></zorder>
-   <zorder>isValidLE</zorder>
+   <zorder>checkLB</zorder>
+   <zorder>analyzeBT</zorder>
+   <zorder>crossLB</zorder>
+   <zorder>analyzeBT</zorder>
+   <zorder>checkLB</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>750</width>
+     <width>757</width>
      <height>21</height>
     </rect>
    </property>
@@ -110,6 +132,8 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

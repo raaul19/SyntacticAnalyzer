@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
+#include <QPixmap>
 
 #include "automatum.h"
 #include <list>

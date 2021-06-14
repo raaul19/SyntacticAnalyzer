@@ -286,28 +286,24 @@ list<Analyzer> Automatum::automata(std::string text){
                     state = RESERVED;
                     strToken += buffer;
                     if(strToken == "while"){
-                        cout << "Token: " << strToken << endl;\
                         Analyzer tokenItem("While",strToken,"10");
                         tokenList.push_back(tokenItem);
                         strToken = ""; // new
                         state = START;
                     }
                     else if(strToken == "if"){
-                        cout << "Token: " << strToken << endl;
                         Analyzer tokenItem("If",strToken,"9");
                         tokenList.push_back(tokenItem);
                         strToken = ""; // new
                         state = START;
                     }
                     else if(strToken == "else"){
-                        cout << "Token: " << strToken << endl;
                         Analyzer tokenItem("Else",strToken,"12");
                         tokenList.push_back(tokenItem);
                         strToken = ""; // new
                         state = START;
                     }
                     else if(strToken == "return"){
-                        cout << "Token: " << strToken << endl;
                         Analyzer tokenItem("Return",strToken,"11");
                         tokenList.push_back(tokenItem);
                         strToken = ""; // new
@@ -315,7 +311,6 @@ list<Analyzer> Automatum::automata(std::string text){
                     }
                     else if(strToken == "int"  || strToken == "float" || strToken == "char"
                                 || strToken == "void"){
-                        cout << "Token: " << strToken << endl;
                         Analyzer tokenItem("Tipo dato",strToken,"0");
                         tokenList.push_back(tokenItem);
                         strToken = ""; // new
@@ -335,28 +330,24 @@ list<Analyzer> Automatum::automata(std::string text){
                     state = RESERVED;
                     //strToken += buffer;
                     if(strToken == "while"){
-                        cout << "Token: " << strToken << endl;\
                         Analyzer tokenItem("While",strToken,"10");
                         tokenList.push_back(tokenItem);
                         strToken = ""; // new
                         state = 0;
                     }
                     else if(strToken == "if"){
-                        cout << "Token: " << strToken << endl;
                         Analyzer tokenItem("If",strToken,"9");
                         tokenList.push_back(tokenItem);
                         strToken = ""; // new
                         state = 0;
                     }
                     else if(strToken == "else"){
-                        cout << "Token: " << strToken << endl;
                         Analyzer tokenItem("Else",strToken,"12");
                         tokenList.push_back(tokenItem);
                         strToken = ""; // new
                         state = 0;
                     }
                     else if(strToken == "return"){
-                        cout << "Token: " << strToken << endl;
                         Analyzer tokenItem("Return",strToken,"11");
                         tokenList.push_back(tokenItem);
                         strToken = ""; // new
@@ -364,7 +355,6 @@ list<Analyzer> Automatum::automata(std::string text){
                     }
                     else if(strToken == "int"  || strToken == "float" || strToken == "char"
                                 || strToken == "void"){
-                        cout << "Token: " << strToken << endl;
                         Analyzer tokenItem("Tipo dato",strToken,"0");
                         tokenList.push_back(tokenItem);
                         strToken = ""; // new
