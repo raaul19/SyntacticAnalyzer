@@ -15,10 +15,12 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     automatum.cpp \
-    analyzer.cpp
+    analyzer.cpp \
+    syntactic.cpp
 
 HEADERS  += mainwindow.h \
     automatum.h \
-    analyzer.h
+    analyzer.h \
+    syntactic.h
 
 FORMS    += mainwindow.ui

@@ -1259,5 +1259,8 @@ list<Analyzer> Automatum::automata(std::string text){
                 cout << "Algo extraño ocurrió..." << endl;
         }
     }
+    Analyzer tokenItem("$","$","18");
+    tokenList.push_back(tokenItem);
     return tokenList;
 }
+

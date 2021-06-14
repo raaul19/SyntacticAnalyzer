@@ -14,7 +14,7 @@
    <string>SintacticAnalyzer</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout">
+   <layout class="QGridLayout" name="gridLayout_3">
     <item row="0" column="0">
      <widget class="QLabel" name="Title">
       <property name="font">
@@ -33,52 +33,61 @@
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QTextEdit" name="textTE"/>
-        </item>
-        <item>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QTextEdit" name="textTE"/>
+      </item>
+      <item row="0" column="1">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
          <widget class="QPushButton" name="analyzeBT">
           <property name="text">
            <string>Analizar</string>
           </property>
          </widget>
         </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="isValidLE">
+          <property name="text">
+           <string>X</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
-      <item>
-       <widget class="QTableWidget" name="tokensTableTG">
-        <column>
-         <property name="text">
-          <string>Token</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Número</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Lexema</string>
-         </property>
-        </column>
-       </widget>
-      </item>
      </layout>
+    </item>
+    <item row="2" column="0">
+     <widget class="QTableWidget" name="tokensTableTG">
+      <column>
+       <property name="text">
+        <string>Token</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Número</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Lexema</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </item>
    </layout>
    <zorder>label</zorder>
    <zorder>Title</zorder>
+   <zorder></zorder>
+   <zorder>isValidLE</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

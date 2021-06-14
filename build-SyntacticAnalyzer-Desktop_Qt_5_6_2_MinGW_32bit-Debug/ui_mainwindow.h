@@ -14,7 +14,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGridLayout>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
@@ -24,7 +23,6 @@
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -33,14 +31,15 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QGridLayout *gridLayout;
+    QGridLayout *gridLayout_3;
     QLabel *Title;
-    QLabel *label;
-    QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout;
+    QGridLayout *gridLayout_2;
     QTextEdit *textTE;
+    QGridLayout *gridLayout;
     QPushButton *analyzeBT;
+    QLabel *isValidLE;
     QTableWidget *tokensTableTG;
+    QLabel *label;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -52,10 +51,10 @@ public:
         MainWindow->resize(750, 762);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        gridLayout = new QGridLayout(centralWidget);
-        gridLayout->setSpacing(6);
-        gridLayout->setContentsMargins(11, 11, 11, 11);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        gridLayout_3 = new QGridLayout(centralWidget);
+        gridLayout_3->setSpacing(6);
+        gridLayout_3->setContentsMargins(11, 11, 11, 11);
+        gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
         Title = new QLabel(centralWidget);
         Title->setObjectName(QStringLiteral("Title"));
         QFont font;
@@ -65,31 +64,34 @@ public:
         Title->setFont(font);
         Title->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(Title, 0, 0, 1, 1);
+        gridLayout_3->addWidget(Title, 0, 0, 1, 1);
 
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-
-        gridLayout->addWidget(label, 1, 0, 1, 1);
-
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setSpacing(6);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        gridLayout_2 = new QGridLayout();
+        gridLayout_2->setSpacing(6);
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         textTE = new QTextEdit(centralWidget);
         textTE->setObjectName(QStringLiteral("textTE"));
 
-        horizontalLayout->addWidget(textTE);
+        gridLayout_2->addWidget(textTE, 0, 0, 1, 1);
 
+        gridLayout = new QGridLayout();
+        gridLayout->setSpacing(6);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
         analyzeBT = new QPushButton(centralWidget);
         analyzeBT->setObjectName(QStringLiteral("analyzeBT"));
 
-        horizontalLayout->addWidget(analyzeBT);
+        gridLayout->addWidget(analyzeBT, 0, 0, 1, 1);
+
+        isValidLE = new QLabel(centralWidget);
+        isValidLE->setObjectName(QStringLiteral("isValidLE"));
+
+        gridLayout->addWidget(isValidLE, 1, 0, 1, 1);
 
 
-        verticalLayout->addLayout(horizontalLayout);
+        gridLayout_2->addLayout(gridLayout, 0, 1, 1, 1);
+
+
+        gridLayout_3->addLayout(gridLayout_2, 1, 0, 1, 1);
 
         tokensTableTG = new QTableWidget(centralWidget);
         if (tokensTableTG->columnCount() < 3)
@@ -102,14 +104,17 @@ public:
         tokensTableTG->setHorizontalHeaderItem(2, __qtablewidgetitem2);
         tokensTableTG->setObjectName(QStringLiteral("tokensTableTG"));
 
-        verticalLayout->addWidget(tokensTableTG);
+        gridLayout_3->addWidget(tokensTableTG, 2, 0, 1, 1);
 
+        label = new QLabel(centralWidget);
+        label->setObjectName(QStringLiteral("label"));
 
-        gridLayout->addLayout(verticalLayout, 2, 0, 1, 1);
+        gridLayout_3->addWidget(label, 3, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralWidget);
         label->raise();
         Title->raise();
+        isValidLE->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 750, 21));
@@ -130,14 +135,15 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "SintacticAnalyzer", 0));
         Title->setText(QApplication::translate("MainWindow", "Analizador Sint\303\241ctico", 0));
-        label->setText(QString());
         analyzeBT->setText(QApplication::translate("MainWindow", "Analizar", 0));
+        isValidLE->setText(QApplication::translate("MainWindow", "X", 0));
         QTableWidgetItem *___qtablewidgetitem = tokensTableTG->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "Token", 0));
         QTableWidgetItem *___qtablewidgetitem1 = tokensTableTG->horizontalHeaderItem(1);
         ___qtablewidgetitem1->setText(QApplication::translate("MainWindow", "N\303\272mero", 0));
         QTableWidgetItem *___qtablewidgetitem2 = tokensTableTG->horizontalHeaderItem(2);
         ___qtablewidgetitem2->setText(QApplication::translate("MainWindow", "Lexema", 0));
+        label->setText(QString());
     } // retranslateUi
 
 };
