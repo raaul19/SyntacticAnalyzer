@@ -6,6 +6,7 @@
 
 #include "automatum.h"
 #include <list>
+#include "syntactic.h"
 
 namespace Ui {
 class MainWindow;
@@ -14,6 +15,7 @@ class MainWindow;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+    Syntactic* syntactic;
 
 public:
     explicit MainWindow(QWidget *parent = 0);
