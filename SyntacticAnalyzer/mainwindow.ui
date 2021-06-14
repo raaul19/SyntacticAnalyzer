@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>LexicalAnalyzer</string>
+   <string>SyntacticAnalyzer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/images/1309.6000.08-2.ico</normaloff>:/images/1309.6000.08-2.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
@@ -32,7 +36,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Analizador Léxico</string>
+       <string>Analizador Sintáctico</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>

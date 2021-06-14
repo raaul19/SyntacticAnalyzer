@@ -49,6 +49,9 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(757, 412);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/images/1309.6000.08-2.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        MainWindow->setWindowIcon(icon);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout_2 = new QGridLayout(centralWidget);
@@ -138,9 +141,9 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "LexicalAnalyzer", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "SyntacticAnalyzer", 0));
         label->setText(QString());
-        Title->setText(QApplication::translate("MainWindow", "Analizador L\303\251xico", 0));
+        Title->setText(QApplication::translate("MainWindow", "Analizador Sint\303\241ctico", 0));
         analyzeBT->setText(QApplication::translate("MainWindow", "Analizar", 0));
         checkLB->setText(QString());
         crossLB->setText(QString());
